@@ -1,6 +1,9 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Link from "next/link"
+import { ArrowRight } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 export default function CTASection() {
   return (
@@ -47,4 +50,24 @@ export default function CTASection() {
           <motion.div
             className="flex flex-col gap-2 min-[400px]:flex-row justify-center pt-4"
             initial={{ opacity: 0 }}
-            whileIn\
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+          >
+            <Link href="/contact">
+              <Button className="bg-white text-brand-cyan hover:bg-blue-50 shadow-lg shadow-blue-900/20">
+                Contact Us
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+            <Link href="/support">
+              <Button variant="outline" className="text-white border-white hover:bg-white/10">
+                Visit Support Center
+              </Button>
+            </Link>
+          </motion.div>
+        </motion.div>
+      </div>
+    </section>
+  )
+}
