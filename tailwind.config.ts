@@ -74,6 +74,9 @@ const config = {
           purple: "#8b5cf6",
           teal: "#14b8a6",
           cyan: "#06b6d4",
+          pink: "#ec4899",
+          amber: "#f59e0b",
+          emerald: "#10b981",
         },
       },
       borderRadius: {
@@ -97,12 +100,16 @@ const config = {
         "pulse-glow": {
           "0%, 100%": {
             opacity: "1",
-            boxShadow: "0 0 20px rgba(99, 102, 241, 0.7)",
+            boxShadow: "0 0 20px rgba(6, 182, 212, 0.7)",
           },
           "50%": {
             opacity: "0.7",
-            boxShadow: "0 0 40px rgba(99, 102, 241, 0.9)",
+            boxShadow: "0 0 40px rgba(6, 182, 212, 0.9)",
           },
+        },
+        shimmer: {
+          "0%": { backgroundPosition: "-200% 0" },
+          "100%": { backgroundPosition: "200% 0" },
         },
       },
       animation: {
@@ -110,6 +117,10 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
         float: "float 6s ease-in-out infinite",
         "pulse-glow": "pulse-glow 3s ease-in-out infinite",
+        shimmer: "shimmer 8s ease-in-out infinite",
+      },
+      backgroundImage: {
+        "gradient-shimmer": "linear-gradient(90deg, transparent, rgba(6, 182, 212, 0.1), transparent)",
       },
     },
   },

@@ -76,7 +76,15 @@
 }
 
 .gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-blue to-brand-purple;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-cyan to-brand-blue;
+}
+
+.gradient-text-alt {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-cyan via-brand-teal to-brand-emerald;
+}
+
+.gradient-text-warm {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-amber via-brand-pink to-brand-purple;
 }
 
 .gradient-bg {
@@ -84,11 +92,21 @@
 }
 
 .card-hover {
-  @apply transition-all duration-300 hover:shadow-lg hover:shadow-brand-blue/10 hover:-translate-y-1;
+  @apply transition-all duration-300 hover:shadow-lg hover:shadow-brand-cyan/10 hover:-translate-y-1;
 }
 
 .animate-in {
   animation: animateIn 0.5s ease forwards;
+}
+
+.shimmer-effect {
+  @apply relative overflow-hidden;
+}
+
+.shimmer-effect::before {
+  @apply absolute inset-0 bg-gradient-shimmer;
+  content: "";
+  background-size: 200% 100%;
 }
 
 @keyframes animateIn {
